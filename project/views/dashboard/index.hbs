@@ -1,0 +1,91 @@
+<div class="row">
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-header">
+                <div class="row">
+                    <div class="col-md-10">
+                        <h2><i class="fa fa-users"></i> Employees List</h2>
+                    </div>
+                    <div class="col-md-2">
+                        <a class="btn btn-secondary" href="/employee/create" style="margin-left: 40px;" title="Add New Employee"><i class="fa fa-user-plus"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Full Name</th>
+                            <th>Email</th>
+                            <th>Mobile</th>
+                            <th>City</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each employees}}
+                        <tr>
+                            <td><a href="/employee/profile/{{this._id}}">{{this.fullName}}</a></td>
+                            <td>{{this.email}}</td>
+                            <td>{{this.mobile}}</td>
+                            <td>{{this.city}}</td>
+                            <td>
+                                <a href="/employee/{{this._id}}"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
+                                <a href="/allProject/delete/{{this._id}}" onclick="return confirm('Are you sure to delete this record ?')" style="margin-left: 10px"><i class="fa fa-trash fa-lg" aria-hidden="true" style="color:crimson"></i></a>
+                            </td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+                <div class="row">
+                    <div class="col-md-2">
+                        <a class="btn btn-secondary" href="/employee" style="margin-left: 0px;" title="View all employees"><i class="fa fa-th"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-header">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h2>Projects</h2>
+                    </div>
+                    <div class="col-md-2">
+                        <a class="btn btn-secondary" href="/allProject/add" style="margin-left: 40px;" title="Add New Project"><i class="fa fa-plus-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Technology</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each projects}}
+                        <tr>
+                            <td><a href="/employee/profile/{{this._id}}">{{this.projectName}}</a></td>
+                            <td>{{this.technology}}</td>
+                            <td>
+                                <a href="/allProject/{{this._id}}"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
+                                <a href="/allProject/delete/{{this._id}}" onclick="return confirm('Are you sure to delete this record ?')" style="margin-left: 10px"><i class="fa fa-trash fa-lg" aria-hidden="true" style="color:crimson"></i></a>
+                            </td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+                <div class="row">
+                    <div class="col-md-2">
+                        <a class="btn btn-secondary" href="/allProject" title="View all employees"><i class="fa fa-th"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

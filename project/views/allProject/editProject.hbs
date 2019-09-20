@@ -1,0 +1,36 @@
+<div class="card">
+    <div class="card-header">
+        <div class="row">
+            <div class="col-md-10">
+                <h2>Edit {{project.projectName}}'s Data</h2>
+            </div>
+            <div class="col-md-2">
+                <a class="btn btn-secondary" href="/allProject"><i class="fa fa-arrow-left"></i> Go Back</a>
+            </div>
+        </div>
+    </div>
+    <form action="/allProject/submit" method="POST">
+        <input type="hidden" name="_id" value="{{project._id}}">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="projectName" placeholder="Enter project name" value="{{project.projectName}}">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="technology" placeholder="Enter project's technology name" value="{{project.technology}}">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-info">Update</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

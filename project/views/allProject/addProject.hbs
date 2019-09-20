@@ -1,0 +1,43 @@
+<form action="/allProject/project_submit" method="POST">
+    <div class="card">
+        <div class="card-header">
+            <div class="row">
+                <div class="col-md-10">
+                    <h3>Asign project</h3>
+                </div>
+                <div class="col-md-2">
+                    <a class="btn btn-secondary" href="/allProject"><i class="fa fa-arrow"> Button</i></a>
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="prname" placeholder="Enter project name">
+                        <div class="text-danger">
+                            {{employee.fullNameError}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="tchname" placeholder="Enter Technology">
+                        <div class="text-danger">
+                            {{employee.fullNameError}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-info">Submit</button> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,24 @@
+{
+  "name": "aa",
+  "version": "1.0.0",
+  "description": "aa",
+  "main": "server.js",
+  "scripts": {
+    "test": "aa"
+  },
+  "repository": {
+    "type": "git",
+    "url": "aa"
+  },
+  "keywords": [
+    "aa"
+  ],
+  "author": "aa",
+  "license": "(ISC)",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "mongoose": "^5.6.11"
+  }
+}

@@ -1,0 +1,35 @@
+<div class="card">
+    <div class="card-header">
+        <div class="row">
+            <div class="col-md-10">
+                <h2><i class="fa fa-users"></i> All projects</h2>
+            </div>
+            <div class="col-md-2">
+                <a class="btn btn-secondary" href="/dashboard" title="Go back"><i class="fa fa-arrow-right"></i> Go back</a>
+            </div>
+        </div>
+    </div>
+    <div class="card-body">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Technology</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each list}}
+                <tr>
+                    <td><a href="/employee/profile/{{this._id}}">{{this.projectName}}</a></td>
+                    <td>{{this.technology}}</td>
+                    <td>
+                        <a href="/employee/{{this._id}}"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
+                        <a href="/allProject/delete/{{this._id}}" onclick="return confirm('Are you sure to delete this record ?')" style="margin-left: 10px"><i class="fa fa-trash fa-lg" aria-hidden="true" style="color:crimson"></i></a>
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>    
+    </div>
+</div>

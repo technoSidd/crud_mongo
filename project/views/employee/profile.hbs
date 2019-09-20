@@ -1,0 +1,26 @@
+<div class="card">
+    <div class="card-header">
+        <div class="row">
+            <div class="col-md-7">
+                <h3>{{employee.fullName}}'s profile</h3>
+            </div>
+            <div class="col-md-5">
+                <a class="btn btn-secondary" href="/employee/project" style="margin-left: 0px;"><i class="fa fa-folder"></i> Assign Project</a>
+                <a href="/employee/{{ employee._id }}"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
+                <a href="/employee/delete/{{ employee._id }}" onclick="return confirm('Are you sure to delete this record ?')" style="margin-left: 10px"><i class="fa fa-trash fa-lg" aria-hidden="true" style="color:crimson"></i></a>
+                <a class="btn btn-secondary" href="/employee" style="margin-left: 118px;"><i class="fa fa-arrow-left"></i> Go Back</a>
+            </div>
+        </div>
+    </div>
+    <div class="card-body">
+        <p><strong><u>PERSONAL DETAILS</u></strong></p>
+        <p><strong>Email:</strong> {{ employee.email }}</p>
+        <p><strong>Mobile:</strong> {{ employee.mobile }}</p>
+        <p><strong>Date of Birth:</strong> {{ employeeProfile.dob }}</p>
+        <p><strong>City:</strong> {{ employee.city }}</p>
+        <p><strong><u>PROFESSIONAL DETAILS</u></strong></p>
+        <p><strong>Experience:</strong> {{ employeeProfile.exp }}</p>
+        <p><strong>Department:</strong> {{ employeeProfile.dept }}</p>
+        <p><strong>Date of Joining:</strong> {{ employeeProfile.doj }}</p>
+    </div>
+</div>
